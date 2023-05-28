@@ -11,6 +11,13 @@
 		BC71A5662A2275940066E736 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A5652A2275940066E736 /* ContentView.swift */; };
 		BC71A5682A2275940066E736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC71A5672A2275940066E736 /* Assets.xcassets */; };
 		BC71A56B2A2275940066E736 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC71A56A2A2275940066E736 /* Preview Assets.xcassets */; };
+		BC71A5732A2279950066E736 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A5722A2279950066E736 /* LocationManager.swift */; };
+		BC71A5762A227B270066E736 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A5752A227B270066E736 /* WelcomeView.swift */; };
+		BC71A5782A227DDF0066E736 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A5772A227DDF0066E736 /* LoadingView.swift */; };
+		BC71A57A2A227F300066E736 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A5792A227F300066E736 /* WeatherManager.swift */; };
+		BC71A5832A2287F50066E736 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A5822A2287F50066E736 /* WeatherView.swift */; };
+		BC71A5852A228D960066E736 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A5842A228D960066E736 /* Extensions.swift */; };
+		BC71A5882A2290060066E736 /* WeatherRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A5872A2290060066E736 /* WeatherRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,15 @@
 		BC71A5652A2275940066E736 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BC71A5672A2275940066E736 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC71A56A2A2275940066E736 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BC71A5722A2279950066E736 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		BC71A5752A227B270066E736 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		BC71A5772A227DDF0066E736 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		BC71A5792A227F300066E736 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		BC71A57C2A227F950066E736 /* WeatherKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WeatherKit.framework; path = System/Library/Frameworks/WeatherKit.framework; sourceTree = SDKROOT; };
+		BC71A5812A2285580066E736 /* mell weather app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "mell weather app.entitlements"; sourceTree = "<group>"; };
+		BC71A5822A2287F50066E736 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		BC71A5842A228D960066E736 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BC71A5872A2290060066E736 /* WeatherRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,8 +51,13 @@
 		BC71A5572A2275940066E736 = {
 			isa = PBXGroup;
 			children = (
+				BC71A5862A228FF60066E736 /* Components */,
+				BC71A5842A228D960066E736 /* Extensions.swift */,
+				BC71A5742A227AC90066E736 /* Views */,
+				BC71A5712A2279790066E736 /* Managers  */,
 				BC71A5622A2275940066E736 /* mell weather app */,
 				BC71A5612A2275940066E736 /* Products */,
+				BC71A57B2A227F950066E736 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,8 +72,8 @@
 		BC71A5622A2275940066E736 /* mell weather app */ = {
 			isa = PBXGroup;
 			children = (
+				BC71A5812A2285580066E736 /* mell weather app.entitlements */,
 				BC71A5632A2275940066E736 /* mell_weather_appApp.swift */,
-				BC71A5652A2275940066E736 /* ContentView.swift */,
 				BC71A5672A2275940066E736 /* Assets.xcassets */,
 				BC71A5692A2275940066E736 /* Preview Content */,
 			);
@@ -65,6 +86,42 @@
 				BC71A56A2A2275940066E736 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BC71A5712A2279790066E736 /* Managers  */ = {
+			isa = PBXGroup;
+			children = (
+				BC71A5722A2279950066E736 /* LocationManager.swift */,
+				BC71A5792A227F300066E736 /* WeatherManager.swift */,
+			);
+			path = "Managers ";
+			sourceTree = "<group>";
+		};
+		BC71A5742A227AC90066E736 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BC71A5652A2275940066E736 /* ContentView.swift */,
+				BC71A5752A227B270066E736 /* WelcomeView.swift */,
+				BC71A5772A227DDF0066E736 /* LoadingView.swift */,
+				BC71A5822A2287F50066E736 /* WeatherView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BC71A57B2A227F950066E736 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC71A57C2A227F950066E736 /* WeatherKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC71A5862A228FF60066E736 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BC71A5872A2290060066E736 /* WeatherRow.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +194,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC71A57A2A227F300066E736 /* WeatherManager.swift in Sources */,
 				BC71A5662A2275940066E736 /* ContentView.swift in Sources */,
 				BC71A5642A2275940066E736 /* mell_weather_appApp.swift in Sources */,
+				BC71A5882A2290060066E736 /* WeatherRow.swift in Sources */,
+				BC71A5852A228D960066E736 /* Extensions.swift in Sources */,
+				BC71A5732A2279950066E736 /* LocationManager.swift in Sources */,
+				BC71A5782A227DDF0066E736 /* LoadingView.swift in Sources */,
+				BC71A5832A2287F50066E736 /* WeatherView.swift in Sources */,
+				BC71A5762A227B270066E736 /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,17 +328,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "mell weather app/mell weather app.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mell weather app/Preview Content\"";
 				DEVELOPMENT_TEAM = X5F5RXLH5X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Weather app requesting your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Weather app requesting your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -293,17 +362,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "mell weather app/mell weather app.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mell weather app/Preview Content\"";
 				DEVELOPMENT_TEAM = X5F5RXLH5X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Weather app requesting your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Weather app requesting your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
