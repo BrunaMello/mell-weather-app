@@ -14,7 +14,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     private let locationManager = CLLocationManager()
     
     @Published var isLoading = false
-    @Published var cityName = "City"
+    @Published var cityName = "Dublin 6"
     
     override init() {
         super.init()

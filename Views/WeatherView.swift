@@ -15,18 +15,30 @@ struct WeatherView: View {
     @StateObject private var locationManager = LocationManager()
     @State private var weather: Weather?
     
+    var hourWeatherData: [HourWeather] {
+        if let weather {
+            return Array(weather.hourlyForecast.filter { hourlyWeather in
+                return hourlyWeather.date.timeIntervalSince(Date()) >= 0
+            }.prefix(24))
+        } else {
+            return []
+        }
+    }
+    
     
     var body: some View {
         ZStack(alignment: .leading){
             if let weather {
                 VStack{
-                    VStack(alignment: .leading, spacing: 5){
+                    VStack(alignment: .center, spacing: 5){
                         
-                        if let location = locationManager.currentLocation {
+//                        if locationManager.currentLocation != nil {
+//                            Text("\(locationManager.cityName)")
+//                                .bold()
+//                                .font(.title)
                             Text("\(locationManager.cityName)")
                                 .bold()
                                 .font(.title)
-                        }
                         
                         
                         Text("Today, \(Date().formatted(.dateTime.month().day().hour().minute()))")
@@ -34,40 +46,37 @@ struct WeatherView: View {
                     
                         
                     }
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .frame(maxWidth: .infinity, alignment: .center)
                     
                     Spacer()
                     
                     VStack {
-                        HStack{
-                            VStack(spacing: 20) {
-                                Image(systemName: "sun.max")
-                                    .font(.system(size: 40))
-                                
-                                Text("Weather condition")
+                        HStack(alignment: .center) {
+                            VStack{
+                                Image(systemName: "\(weather.currentWeather.symbolName)")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 60)
+                                    .foregroundColor(.yellow)
+                                Text("\(weather.currentWeather.condition.description)")
+                                    .font(.subheadline)
                             }
-                            .frame(width: 150, alignment: .leading)
-                            
-                            Spacer()
+                            .frame(width: 100, height: 200)
                             
                             Text("\(weather.currentWeather.temperature.formatted())")
-                                .font(.system(size: 70))
+                                .font(.system(size: 100))
                                 .fontWeight(.bold)
-                                .padding()
+                            
+                        }
+                        
+                        HStack(alignment: .center, spacing: 50){
+
+                            HourlyForecastView(hourWeatherList: hourWeatherData)
                         }
                         
                         Spacer()
                             .frame(height: 80)
-                        
-                        AsyncImage(url: URL(string: "https://cdn.pixabay.com/photo/2020/01/24/21/33/city-4791269_1280.png")) { image in
-                            image
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 350)
-                        } placeholder: {
-                            ProgressView()
-                        }
-                        
+                                                        
                         Spacer()
                     }
                     .frame(maxWidth: .infinity)
@@ -114,19 +123,19 @@ struct WeatherView: View {
                 
             }
             }
-            
         .edgesIgnoringSafeArea(.bottom)
         .background(Color(hue: 0.655, saturation: 0.787, brightness: 0.354))
         .preferredColorScheme(.dark)
         .task(id: locationManager.currentLocation) {
             do {
                 if let location = locationManager.currentLocation {
+//                let location = CLLocation(latitude: 53.328456, longitude: -6.263981)
                     self.weather = try await weatherService.weather(for: location)
                 }
             } catch {
                 print(error)
             }
-            
+
         }
     }
 }

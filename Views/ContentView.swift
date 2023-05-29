@@ -18,7 +18,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            if let weather {
+            if weather != nil {
                     WeatherView()
                 }
             
@@ -40,14 +40,14 @@ struct ContentView: View {
         .task(id: locationManager.currentLocation) {
             do {
                 if let location = locationManager.currentLocation {
+//                let location = CLLocation(latitude: 53.328456, longitude: -6.263981)
                     self.weather = try await weatherService.weather(for: location)
                 }
             } catch {
                 print(error)
             }
-            
+
         }
-        
     }
 }
 

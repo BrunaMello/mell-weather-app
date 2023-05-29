@@ -18,6 +18,7 @@
 		BC71A5832A2287F50066E736 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A5822A2287F50066E736 /* WeatherView.swift */; };
 		BC71A5852A228D960066E736 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A5842A228D960066E736 /* Extensions.swift */; };
 		BC71A5882A2290060066E736 /* WeatherRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A5872A2290060066E736 /* WeatherRow.swift */; };
+		BC8280332A2525D700569626 /* HourlyForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8280322A2525D700569626 /* HourlyForecastView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		BC71A5822A2287F50066E736 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		BC71A5842A228D960066E736 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BC71A5872A2290060066E736 /* WeatherRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRow.swift; sourceTree = "<group>"; };
+		BC8280322A2525D700569626 /* HourlyForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				BC71A5752A227B270066E736 /* WelcomeView.swift */,
 				BC71A5772A227DDF0066E736 /* LoadingView.swift */,
 				BC71A5822A2287F50066E736 /* WeatherView.swift */,
+				BC8280322A2525D700569626 /* HourlyForecastView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				BC71A5662A2275940066E736 /* ContentView.swift in Sources */,
 				BC71A5642A2275940066E736 /* mell_weather_appApp.swift in Sources */,
 				BC71A5882A2290060066E736 /* WeatherRow.swift in Sources */,
+				BC8280332A2525D700569626 /* HourlyForecastView.swift in Sources */,
 				BC71A5852A228D960066E736 /* Extensions.swift in Sources */,
 				BC71A5732A2279950066E736 /* LocationManager.swift in Sources */,
 				BC71A5782A227DDF0066E736 /* LoadingView.swift in Sources */,
