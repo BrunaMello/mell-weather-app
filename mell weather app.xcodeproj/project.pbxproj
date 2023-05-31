@@ -17,6 +17,7 @@
 		BC71A5832A2287F50066E736 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A5822A2287F50066E736 /* WeatherView.swift */; };
 		BC71A5852A228D960066E736 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A5842A228D960066E736 /* Extensions.swift */; };
 		BC71A5882A2290060066E736 /* WeatherRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A5872A2290060066E736 /* WeatherRow.swift */; };
+		BC810DAA2A27D4DB0022BD5A /* TenDaysForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC810DA92A27D4DB0022BD5A /* TenDaysForecastView.swift */; };
 		BC8280332A2525D700569626 /* HourlyForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8280322A2525D700569626 /* HourlyForecastView.swift */; };
 		BCE652DC2A263F6700956282 /* CurrentWeatherDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE652DB2A263F6700956282 /* CurrentWeatherDetailsView.swift */; };
 		BCE652E02A26578C00956282 /* CurrentTemperatureRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE652DF2A26578C00956282 /* CurrentTemperatureRow.swift */; };
@@ -37,6 +38,7 @@
 		BC71A5822A2287F50066E736 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		BC71A5842A228D960066E736 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BC71A5872A2290060066E736 /* WeatherRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRow.swift; sourceTree = "<group>"; };
+		BC810DA92A27D4DB0022BD5A /* TenDaysForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenDaysForecastView.swift; sourceTree = "<group>"; };
 		BC8280322A2525D700569626 /* HourlyForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastView.swift; sourceTree = "<group>"; };
 		BCE652DB2A263F6700956282 /* CurrentWeatherDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherDetailsView.swift; sourceTree = "<group>"; };
 		BCE652DF2A26578C00956282 /* CurrentTemperatureRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTemperatureRow.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				BC71A5822A2287F50066E736 /* WeatherView.swift */,
 				BC8280322A2525D700569626 /* HourlyForecastView.swift */,
 				BCE652DB2A263F6700956282 /* CurrentWeatherDetailsView.swift */,
+				BC810DA92A27D4DB0022BD5A /* TenDaysForecastView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				BC8280332A2525D700569626 /* HourlyForecastView.swift in Sources */,
 				BC71A5852A228D960066E736 /* Extensions.swift in Sources */,
 				BC71A5732A2279950066E736 /* LocationManager.swift in Sources */,
+				BC810DAA2A27D4DB0022BD5A /* TenDaysForecastView.swift in Sources */,
 				BC71A5782A227DDF0066E736 /* LoadingView.swift in Sources */,
 				BCE652E02A26578C00956282 /* CurrentTemperatureRow.swift in Sources */,
 				BCE652E22A265BF100956282 /* DateAndCityRow.swift in Sources */,

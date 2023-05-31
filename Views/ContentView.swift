@@ -22,7 +22,6 @@ struct ContentView: View {
                 WeatherView()
             }
         }
-            .background(Color(hue: 0.655, saturation: 0.787, brightness: 0.354))
             .task(id: locationManager.currentLocation) {
             do {
                 if let location = locationManager.currentLocation {

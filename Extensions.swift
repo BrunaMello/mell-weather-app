@@ -15,6 +15,20 @@ extension View {
     }
 }
 
+extension Date {
+    func formatAsAbbreviatedDay() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEE"
+        return formatter.string(from: self)
+    }
+    
+    func formatAsAbbreviatedTime() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "ha"
+        return formatter.string(from: self)
+    }
+}
+
 struct RoundedCorner: Shape {
     var radius: CGFloat = .infinity
     var corners: UIRectCorner = .allCorners

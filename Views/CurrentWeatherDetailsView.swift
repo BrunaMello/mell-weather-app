@@ -57,6 +57,7 @@ struct CurrentWeatherDetailsView: View {
             .padding(.bottom, 20)
             .foregroundColor(Color(.black))
             .background(.gray)
+            .opacity(0.50)
             .cornerRadius(20)
             .task(id: locationManager.currentLocation) {
                 do {

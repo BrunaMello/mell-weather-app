@@ -29,20 +29,23 @@ struct WeatherView: View {
     
     var body: some View {
         ZStack(alignment: .leading){
-            VStack {
-                DateAndCityRow()
-                
-                CurrentTemperatureRow()
-                
-                HourlyForecastView(hourWeatherList: hourWeatherData)
-                
-                Spacer()
-                
-                CurrentWeatherDetailsView()
+            if let weather {
+                VStack {
+                    DateAndCityRow()
+                    
+                    CurrentTemperatureRow()
+                    
+                    HourlyForecastView(hourWeatherList: hourWeatherData)
+                    
+                    Spacer()
+                    
+                    TenDaysForecastView(dayWeatherList: weather.dailyForecast.forecast)
+                    
+                }
             }
+            
         }
         .edgesIgnoringSafeArea(.bottom)
-//        .background(Color(hue: 0.655, saturation: 0.787, brightness: 0.354))
         .task(id: locationManager.currentLocation) {
             do {
                 //                if let location = locationManager.currentLocation {
