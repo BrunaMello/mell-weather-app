@@ -7,7 +7,6 @@
 
 import SwiftUI
 import WeatherKit
-import CoreLocation
 
 struct HourlyForecastView: View {
     
@@ -36,16 +35,6 @@ struct HourlyForecastView: View {
                     }
                 }
             }
-            
-        }
-    }
-}
-
-struct HourlyForecastView_Previews: PreviewProvider {
-    
-    let weather: Weather?
-    
-    static var previews: some View {
-        WeatherView()
+        }.frame(maxWidth: .infinity, alignment: .center)
     }
 }

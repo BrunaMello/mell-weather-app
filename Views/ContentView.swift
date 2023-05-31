@@ -10,34 +10,20 @@ import WeatherKit
 import CoreLocation
 
 struct ContentView: View {
-    
+
     let weatherService = WeatherService.shared
     @StateObject private var locationManager = LocationManager()
     @State private var weather: Weather?
-    
-    
+
+
     var body: some View {
         VStack {
             if weather != nil {
-                    WeatherView()
-                }
-            
-//            if let location = locationManager.location {
-//                Text("Your coordinates are: \(location.longitude), \(location.latitude).")
-//            } else {
-//                if locationManager.isLoading {
-//                    LoadingView()
-//                } else {
-//                    WeatherView()
-//                        .environmentObject(locationManager)
-//                }
-//            }
-            
-            
+                WeatherView()
+            }
         }
-//        .background(Color(hue: 0.655, saturation: 0.787, brightness: 0.354))
-//        .preferredColorScheme(.dark)
-        .task(id: locationManager.currentLocation) {
+            .background(Color(hue: 0.655, saturation: 0.787, brightness: 0.354))
+            .task(id: locationManager.currentLocation) {
             do {
                 if let location = locationManager.currentLocation {
 //                let location = CLLocation(latitude: 53.328456, longitude: -6.263981)

@@ -12,7 +12,6 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     @Published var currentLocation: CLLocation?
     private let locationManager = CLLocationManager()
-    
     @Published var isLoading = false
     @Published var cityName = "Dublin 6"
     
@@ -25,12 +24,11 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         locationManager.delegate = self
     }
     
-    func requestLocation() {
-        isLoading = true
-        locationManager.requestLocation()
-    }
+    
+    
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
         guard let location = locations.last, currentLocation == nil else { return }
         
         DispatchQueue.main.async {
